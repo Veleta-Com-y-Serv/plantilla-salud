@@ -41,3 +41,5 @@ Antes de dar una orden por buena: `npm run build` sin errores.
 - `hero.items`: garantías con check (solo `titulo`). `hero.destacado` {titulo, texto}: tarjeta flotante sobre la foto.
 - `citas.items`: pasos numerados; `citas.cta.texto`: texto del botón de WhatsApp (usa `contacto.whatsapp`).
 - `contacto.imagen`: plano que enlaza a mapas.
+
+Fotos de partida en public/fotos/ (generadas con IA, sin derechos de terceros); los SVG de public/placeholders/ siguen de respaldo.

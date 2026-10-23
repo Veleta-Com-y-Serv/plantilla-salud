@@ -38,7 +38,7 @@ secciones:
     antetitulo: Clínica dental en el centro de Huesca
     titulo: Sonríe tranquilo. Te cuidamos sin prisas.
     texto: "Tres doctores, tecnología digital y presupuestos claros antes de empezar."
-    imagen: /placeholders/hero.svg
+    imagen: /fotos/hero.jpg
     cta: { texto: Pedir cita, url: "/#citas" }
     items:
       - { titulo: Primera visita y diagnóstico gratis }
@@ -64,9 +64,9 @@ secciones:
     antetitulo: Equipo
     titulo: Te atiende siempre un especialista
     personas:
-      - { nombre: Dra. Laura Coso, cargo: Directora médica · Implantes, foto: /placeholders/persona.svg, texto: Colegiada n.º 22000412 }
-      - { nombre: Dr. Pablo Ferrer, cargo: Ortodoncia, foto: /placeholders/persona.svg, texto: Colegiado n.º 22000538 }
-      - { nombre: Dra. Nuria Esteban, cargo: Odontopediatría y estética, foto: /placeholders/persona.svg, texto: Colegiada n.º 22000611 }
+      - { nombre: Dra. Laura Coso, cargo: Directora médica · Implantes, foto: /fotos/persona-1.jpg, texto: Colegiada n.º 22000412 }
+      - { nombre: Dr. Pablo Ferrer, cargo: Ortodoncia, foto: /fotos/persona-2.jpg, texto: Colegiado n.º 22000538 }
+      - { nombre: Dra. Nuria Esteban, cargo: Odontopediatría y estética, foto: /fotos/persona-3.jpg, texto: Colegiada n.º 22000611 }
 
   citas:
     activa: true
