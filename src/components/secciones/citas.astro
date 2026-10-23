@@ -1,0 +1,54 @@
+---
+// Pedir cita: pasos numerados + bloque de color con WhatsApp, teléfono y horario.
+import { seccion, site, tel, whatsapp } from '../../data/site';
+import Seccion from '../ui/Seccion.astro';
+import Titular from '../ui/Titular.astro';
+import Icono from '../ui/Icono.astro';
+interface Props { id: string }
+const s = seccion(Astro.props.id);
+const c = site.contacto;
+---
+
+{
+  s && (
+    <Seccion id={Astro.props.id} class="tinte">
+      <div class="grid gap-10 md:grid-cols-2 md:items-center">
+        <div>
+          <Titular antetitulo={s.antetitulo} titulo={s.titulo} texto={s.texto} />
+          <ol class="grid gap-4">
+            {s.items.map((it, i) => (
+              <li class="flex gap-4">
+                <span class="grid h-9 w-9 shrink-0 place-items-center rounded-full bg-primario font-semibold text-white">{i + 1}</span>
+                <div>
+                  <p class="font-semibold">{it.titulo}</p>
+                  {it.texto && <p class="text-sm opacity-70">{it.texto}</p>}
+                </div>
+              </li>
+            ))}
+          </ol>
+        </div>
+        <div class="rounded-[1.75rem] bg-primario p-6 text-white md:p-10">
+          <p class="text-2xl font-semibold">Reserva en un minuto</p>
+          <div class="mt-6 grid gap-3">
+            {c.whatsapp && (
+              <a href={whatsapp(c.whatsapp, 'Hola, quiero pedir cita')} rel="noopener" target="_blank" class="btn bg-white !text-primario hover:!bg-white/90">
+                <Icono nombre="whatsapp" tam={20} /> {s.cta?.texto ?? 'Pedir cita por WhatsApp'}
+              </a>
+            )}
+            {c.telefono && (
+              <a href={tel(c.telefono)} class="btn border border-white/40 bg-transparent">
+                <Icono nombre="telefono" tam={20} /> Llamar al {c.telefono}
+              </a>
+            )}
+          </div>
+          {c.horario && (
+            <p class="mt-6 flex gap-3 text-sm opacity-85">
+              <Icono nombre="reloj" tam={18} class="mt-0.5 shrink-0" />
+              {c.horario}
+            </p>
+          )}
+        </div>
+      </div>
+    </Seccion>
+  )
+}

@@ -1,0 +1,97 @@
+# Contenido de la web. Es lo único que rellena la plataforma NoExpertise.
+# Las secciones se muestran en el orden de este fichero. Para ocultar una: activa: false.
+nombre: Clínica Dental Coso
+eslogan: Odontología general, ortodoncia e implantes en Huesca.
+sector: dental
+logo: ""          # ruta a una imagen en public/ (p. ej. /logo.svg). Vacío = nombre en texto.
+colores:
+  primario: "#0f766e"
+  acento: "#38bdf8"
+  fondo: "#ffffff"
+  texto: "#0f172a"
+contacto:
+  telefono: "974 21 44 90"
+  email: citas@clinicadentalcoso.es
+  direccion: Calle Coso Bajo 41, 22001 Huesca
+  horario: "Lunes a viernes, de 9:00 a 14:00 y de 15:30 a 20:00."
+  whatsapp: "+34 655 21 44 90"
+redes:
+  instagram: https://www.instagram.com/
+  facebook: https://www.facebook.com/
+  linkedin: ""
+menu:
+  - { texto: Tratamientos, url: "/#servicios" }
+  - { texto: Equipo, url: "/#equipo" }
+  - { texto: Pedir cita, url: "/#citas" }
+  - { texto: Preguntas, url: "/#preguntas" }
+  - { texto: Contacto, url: "/#contacto" }
+boton_cabecera: { texto: Pedir cita, url: "/#citas" }
+seo:
+  titulo: Clínica Dental Coso · Dentista en Huesca
+  descripcion: "Clínica dental en el centro de Huesca. Tres doctores, primera visita gratuita y cita por WhatsApp. Ortodoncia invisible, implantes e higiene."
+  tipo: Dentist
+marca_pie: true
+
+secciones:
+  hero:
+    activa: true
+    antetitulo: Clínica dental en el centro de Huesca
+    titulo: Sonríe tranquilo. Te cuidamos sin prisas.
+    texto: "Tres doctores, tecnología digital y presupuestos claros antes de empezar."
+    imagen: /placeholders/hero.svg
+    cta: { texto: Pedir cita, url: "/#citas" }
+    items:
+      - { titulo: Primera visita y diagnóstico gratis }
+      - { titulo: Financiación hasta 24 meses sin intereses }
+      - { titulo: Urgencias en el mismo día }
+    destacado: { titulo: Cita en 48 horas, texto: "Escríbenos por WhatsApp" }
+
+  servicios:
+    activa: true
+    antetitulo: Tratamientos
+    titulo: Todo lo que tu boca necesita
+    texto: "Te explicamos cada tratamiento y su precio antes de empezar."
+    items:
+      - { titulo: Odontología general, texto: "Revisiones, empastes y endodoncias con anestesia sin dolor.", icono: diente }
+      - { titulo: Ortodoncia invisible, texto: "Alineadores transparentes con plan digital y seguimiento mensual.", icono: ojo }
+      - { titulo: Implantes, texto: "Implantes de titanio con garantía y cirugía guiada por ordenador.", icono: escudo }
+      - { titulo: Higiene y prevención, texto: "Limpiezas, selladores y fluoración para toda la familia.", icono: hoja }
+      - { titulo: Estética dental, texto: "Blanqueamiento y carillas para una sonrisa natural.", icono: estrella }
+      - { titulo: Odontopediatría, texto: "Primeras visitas para niños, con calma y sin miedo.", icono: nino }
+
+  equipo:
+    activa: true
+    antetitulo: Equipo
+    titulo: Te atiende siempre un especialista
+    personas:
+      - { nombre: Dra. Laura Coso, cargo: Directora médica · Implantes, foto: /placeholders/persona.svg, texto: Colegiada n.º 22000412 }
+      - { nombre: Dr. Pablo Ferrer, cargo: Ortodoncia, foto: /placeholders/persona.svg, texto: Colegiado n.º 22000538 }
+      - { nombre: Dra. Nuria Esteban, cargo: Odontopediatría y estética, foto: /placeholders/persona.svg, texto: Colegiada n.º 22000611 }
+
+  citas:
+    activa: true
+    antetitulo: Pedir cita
+    titulo: Tu cita, en tres pasos
+    texto: "Sin esperas al teléfono. Te respondemos el mismo día."
+    cta: { texto: Pedir cita por WhatsApp, url: "" }
+    items:
+      - { titulo: Escríbenos, texto: "Por WhatsApp o por teléfono. Dinos qué te pasa y qué horario te va mejor." }
+      - { titulo: Te proponemos día y hora, texto: "Normalmente en menos de 48 horas. Urgencias, el mismo día." }
+      - { titulo: Primera visita gratuita, texto: "Revisión, radiografía digital y presupuesto por escrito." }
+
+  preguntas:
+    activa: true
+    antetitulo: Preguntas frecuentes
+    titulo: Resolvemos tus dudas
+    preguntas:
+      - { pregunta: ¿La primera visita tiene coste?, respuesta: "No. La primera revisión y el presupuesto son gratuitos y sin compromiso." }
+      - { pregunta: ¿Trabajáis con seguros dentales?, respuesta: "Sí, con las principales aseguradoras. Pregúntanos por la tuya al pedir cita." }
+      - { pregunta: ¿Puedo pagar a plazos?, respuesta: "Sí. Ofrecemos financiación hasta 24 meses sin intereses en tratamientos desde 600 €." }
+      - { pregunta: ¿Atendéis urgencias?, respuesta: "Sí. Si tienes dolor, llámanos y te vemos el mismo día." }
+
+  contacto:
+    activa: true
+    antetitulo: Contacto
+    titulo: Escríbenos
+    texto: "Te respondemos en horario de clínica."
+    imagen: /placeholders/mapa.svg

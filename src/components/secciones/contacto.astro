@@ -1,0 +1,38 @@
+---
+// Contacto: formulario en tarjeta + datos y plano con enlace a mapas.
+import { seccion, site, tel, mapa } from '../../data/site';
+import Seccion from '../ui/Seccion.astro';
+import Titular from '../ui/Titular.astro';
+import Imagen from '../ui/Imagen.astro';
+import Icono from '../ui/Icono.astro';
+import FormularioContacto from '../ui/FormularioContacto.astro';
+interface Props { id: string }
+const s = seccion(Astro.props.id);
+const c = site.contacto;
+---
+
+{
+  s && (
+    <Seccion id={Astro.props.id}>
+      <div class="grid gap-8 md:grid-cols-2">
+        <div class="tarjeta p-6 md:p-10">
+          <Titular antetitulo={s.antetitulo} titulo={s.titulo} texto={s.texto} />
+          <FormularioContacto boton="Enviar consulta" />
+        </div>
+        <div class="grid content-start gap-4">
+          {s.imagen && (
+            <a href={mapa(c.direccion)} rel="noopener" target="_blank" class="block overflow-hidden rounded-[1.25rem]" aria-label="Ver en el mapa">
+              <Imagen src={s.imagen} alt="Plano de situación de la clínica" ancho={1000} alto={700} class="aspect-[10/7] w-full object-cover" />
+            </a>
+          )}
+          <ul class="tarjeta grid gap-4 p-6">
+            {c.direccion && <li class="flex gap-3"><Icono nombre="mapa" class="shrink-0 text-primario" />{c.direccion}</li>}
+            {c.telefono && <li class="flex gap-3"><Icono nombre="telefono" class="shrink-0 text-primario" /><a href={tel(c.telefono)}>{c.telefono}</a></li>}
+            {c.email && <li class="flex gap-3"><Icono nombre="correo" class="shrink-0 text-primario" /><a class="break-all" href={`mailto:${c.email}`}>{c.email}</a></li>}
+            {c.horario && <li class="flex gap-3"><Icono nombre="reloj" class="shrink-0 text-primario" />{c.horario}</li>}
+          </ul>
+        </div>
+      </div>
+    </Seccion>
+  )
+}

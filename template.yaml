@@ -1,0 +1,13 @@
+# Metadatos de la plantilla para el catálogo de NoExpertise.
+id: salud
+nombre: Clínica y salud
+descripcion: Web limpia para clínicas, dentistas y fisios, con cita por WhatsApp y preguntas frecuentes.
+sectores: [clinica, dental, fisio]
+secciones: [hero, servicios, equipo, citas, preguntas, contacto]
+estilo: limpio
+plan_minimo: presencia
+version: 1.0.0
+base: astrowind
+demo_url: https://demo-plantilla-salud.noexpertise.com
+activa: true
+orden: 30

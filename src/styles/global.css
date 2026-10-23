@@ -1,0 +1,44 @@
+/* Clínica y salud — estilo limpio: sans neutra, mucho blanco, tarjetas con sombra suave, botones píldora, tonos agua. */
+@import "tailwindcss";
+@import "./comun.css";
+@config "../../tailwind.config.mjs";
+
+:root {
+  --fuente-texto: "Segoe UI", system-ui, -apple-system, Roboto, "Helvetica Neue", Arial, sans-serif;
+  --fuente-titulos: "Segoe UI Variable Display", "Segoe UI", system-ui, -apple-system, Roboto, sans-serif;
+  --radio: .75rem; --ritmo: 4rem; --ritmo-md: 6rem; --ancho: 72rem;
+}
+
+@layer base {
+  body { font-family: var(--fuente-texto); font-size: 1rem; line-height: 1.65; }
+  h1, h2, h3 { font-family: var(--fuente-titulos); font-weight: 650; letter-spacing: -0.02em; line-height: 1.15; }
+}
+
+@layer components {
+  .antetitulo { font-size: .8rem; font-weight: 600; color: var(--c-primario); display: inline-flex; align-items: center; gap: .5rem; }
+  .antetitulo::before { content: ""; width: .5rem; height: .5rem; border-radius: 999px; background: var(--c-acento); }
+  .titulo-seccion { font-size: clamp(1.75rem, 4.2vw, 2.5rem); margin-top: .6rem; }
+  .titular { max-width: 40rem; margin-bottom: 2.5rem; }
+  .titular--centro { margin-inline: auto; text-align: center; }
+  .titular-texto { margin-top: .8rem; opacity: .72; font-size: 1.075rem; }
+
+  .btn { border-radius: 999px; background: var(--c-primario); color: #fff; padding-inline: 1.5rem; }
+  .btn:hover { background: color-mix(in srgb, var(--c-primario) 88%, #000); }
+  .btn-sec { border-radius: 999px; background: color-mix(in srgb, var(--c-primario) 10%, #fff); color: var(--c-primario); padding-inline: 1.5rem; }
+  .btn-sec:hover { background: color-mix(in srgb, var(--c-primario) 16%, #fff); }
+  .tarjeta { background: #fff; border-radius: 1.25rem; border: 1px solid color-mix(in srgb, var(--c-texto) 7%, transparent); box-shadow: 0 1px 2px rgb(15 23 42 / .04), 0 8px 24px -12px rgb(15 23 42 / .12); }
+  .tinte { background: color-mix(in srgb, var(--c-primario) 5%, var(--c-fondo)); }
+
+  .cabecera--limpia { position: sticky; top: 0; background: color-mix(in srgb, var(--c-fondo) 92%, transparent); backdrop-filter: saturate(1.4) blur(10px); border-bottom: 1px solid color-mix(in srgb, var(--c-texto) 7%, transparent); }
+  .cabecera--limpia .marca-inicial { display: grid; place-items: center; width: 2.25rem; height: 2.25rem; border-radius: .7rem; background: var(--c-primario); color: #fff; font-weight: 700; }
+  .cabecera--limpia .marca-nombre { font-weight: 650; font-size: 1.1rem; }
+  .cabecera--limpia .cabecera-nav a { font-size: .95rem; opacity: .8; }
+  .cabecera--limpia .cabecera-nav a:hover { opacity: 1; color: var(--c-primario); }
+
+  .pie--limpio { background: color-mix(in srgb, var(--c-primario) 6%, #fff); }
+  .campo input, .campo textarea { border-radius: .75rem; background: #fff; }
+
+  .faq summary { list-style: none; cursor: pointer; }
+  .faq summary::-webkit-details-marker { display: none; }
+  .faq[open] .faq-signo { transform: rotate(45deg); }
+}

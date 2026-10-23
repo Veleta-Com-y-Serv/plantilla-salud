@@ -1,0 +1,60 @@
+---
+// Hero limpio: titular, lista de garantías con check y botón de cita; foto redondeada con tarjeta flotante.
+import { seccion, site, tel } from '../../data/site';
+import Imagen from '../ui/Imagen.astro';
+import Icono from '../ui/Icono.astro';
+interface Props { id: string; primera?: boolean }
+const { id, primera = false } = Astro.props;
+const s = seccion(id);
+const c = site.contacto;
+const destacado = s?.destacado as { titulo?: string; texto?: string } | undefined;
+---
+
+{
+  s && (
+    <section id={id} class="overflow-hidden">
+      <div class="contenedor grid items-center gap-12 py-12 md:grid-cols-2 md:py-20">
+        <div>
+          {s.antetitulo && <p class="antetitulo">{s.antetitulo}</p>}
+          <h1 class="mt-4 text-[clamp(2.2rem,5.5vw,3.5rem)]">{s.titulo}</h1>
+          {s.texto && <p class="mt-5 max-w-lg text-lg opacity-75">{s.texto}</p>}
+          {s.items.length > 0 && (
+            <ul class="mt-6 grid gap-2.5">
+              {s.items.map((it) => (
+                <li class="flex items-center gap-3">
+                  <span class="grid h-6 w-6 shrink-0 place-items-center rounded-full bg-primario/10 text-primario">
+                    <Icono nombre="check" tam={16} />
+                  </span>
+                  {it.titulo}
+                </li>
+              ))}
+            </ul>
+          )}
+          <div class="mt-8 flex flex-wrap gap-3">
+            {s.cta && <a class="btn" href={s.cta.url}>{s.cta.texto}</a>}
+            {c.telefono && (
+              <a class="btn-sec" href={tel(c.telefono)}>
+                <Icono nombre="telefono" tam={18} /> {c.telefono}
+              </a>
+            )}
+          </div>
+        </div>
+        <div class="relative">
+          <div class="absolute -right-24 -top-16 h-72 w-72 rounded-full bg-acento/20 blur-3xl" aria-hidden="true" />
+          <Imagen src={s.imagen} alt="" ancho={1200} alto={1000} prioridad={primera} class="relative aspect-[6/5] w-full rounded-[1.75rem] object-cover" />
+          {destacado?.titulo && (
+            <div class="tarjeta absolute -bottom-6 left-4 flex max-w-[16rem] items-center gap-3 p-4 md:-left-8">
+              <span class="grid h-10 w-10 shrink-0 place-items-center rounded-full bg-primario text-white">
+                <Icono nombre="calendario" tam={20} />
+              </span>
+              <span>
+                <span class="block text-sm font-semibold">{destacado.titulo}</span>
+                {destacado.texto && <span class="block text-xs opacity-70">{destacado.texto}</span>}
+              </span>
+            </div>
+          )}
+        </div>
+      </div>
+    </section>
+  )
+}
