@@ -6,7 +6,7 @@ sectores: [clinica, dental, fisio]
 secciones: [hero, servicios, equipo, citas, preguntas, contacto]
 estilo: limpio
 plan_minimo: presencia
-version: 1.1.0
+version: 1.2.0
 base: astrowind
 demo_url: https://demo-plantilla-salud.noexpertise.com
 activa: true
