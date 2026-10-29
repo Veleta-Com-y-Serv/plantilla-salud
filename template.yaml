@@ -6,8 +6,60 @@ sectores: [clinica, dental, fisio]
 secciones: [hero, servicios, equipo, citas, preguntas, contacto]
 estilo: limpio
 plan_minimo: presencia
-version: 1.2.0
+version: 1.3.0
 base: astrowind
 demo_url: https://demo-plantilla-salud.noexpertise.com
 activa: true
 orden: 30
+
+# Asistente de puesta en marcha (NoExpertise): un paso por pantalla. Rutas del site sin índices;
+# tipos: texto y lista (la IA propone), datos, fotos, eleccion (colores y logo) y repaso.
+asistente:
+  - id: negocio
+    titulo: "Tu centro"
+    pregunta: "¿Cómo se llama tu clínica o consulta y qué tratáis?"
+    ayuda: "Especialidades, para quién y cómo atendéis."
+    tipo: texto
+    campos: [nombre, eslogan, secciones.hero.antetitulo, secciones.hero.titulo, secciones.hero.texto, secciones.hero.destacado.titulo, secciones.hero.destacado.texto, seo.descripcion]
+  - id: contacto
+    titulo: "Cómo te encuentran"
+    pregunta: "¿Dónde estáis y cómo os pueden pedir cita?"
+    ayuda: "Solo lo que quieras que vean tus clientes. Lo que dejes vacío no sale en tu web."
+    tipo: datos
+    campos: [contacto.telefono, contacto.whatsapp, contacto.email, contacto.direccion, contacto.horario, redes.instagram, redes.facebook]
+  - id: servicios
+    titulo: "Tratamientos"
+    pregunta: "¿Qué tratamientos o servicios ofrecéis? Uno por línea."
+    tipo: texto
+    campos: [secciones.servicios.titulo, secciones.servicios.texto, secciones.servicios.items]
+  - id: equipo
+    titulo: "Profesionales"
+    pregunta: "¿Quién forma el equipo? Nombre y qué hace cada uno, uno por línea."
+    ayuda: "Las fotos las pones luego en Contenido."
+    tipo: lista
+    campos: [secciones.equipo.personas]
+  - id: citas
+    titulo: "Pedir cita"
+    pregunta: "¿Cómo se pide cita? Cuéntame los pasos."
+    tipo: texto
+    campos: [secciones.citas.titulo, secciones.citas.texto, secciones.citas.items]
+  - id: preguntas
+    titulo: "Preguntas frecuentes"
+    pregunta: "¿Qué os preguntan más a menudo? Escribe cada pregunta y lo que respondéis."
+    ayuda: "Si lo prefieres, añádelos luego en Contenido."
+    tipo: lista
+    campos: [secciones.preguntas.preguntas]
+  - id: fotos
+    titulo: "Tus fotos"
+    pregunta: "Pon una foto de portada y, si quieres, alguna más."
+    ayuda: "Sube las tuyas o elige una del banco. Las que no cambies se quedan como están."
+    tipo: fotos
+    campos: [secciones.hero.imagen, secciones.contacto.imagen]
+  - id: aspecto
+    titulo: "Colores y logo"
+    pregunta: "Elige los colores de tu web y, si tienes, tu logo."
+    tipo: eleccion
+    campos: [colores.primario, colores.acento, logo]
+  - id: repaso
+    titulo: "Repaso"
+    tipo: repaso
