@@ -3,10 +3,16 @@ id: salud
 nombre: Clínica y salud
 descripcion: Web limpia para clínicas, dentistas y fisios, con cita por WhatsApp y preguntas frecuentes.
 sectores: [clinica, dental, fisio]
-secciones: [hero, servicios, equipo, citas, preguntas, contacto]
+secciones:
+  - { id: hero, nombre: Portada }
+  - { id: servicios, nombre: Servicios }
+  - { id: equipo, nombre: Equipo }
+  - { id: citas, nombre: Pedir cita }
+  - { id: preguntas, nombre: Preguntas frecuentes }
+  - { id: contacto, nombre: Contacto }
 estilo: limpio
 plan_minimo: presencia
-version: 1.3.0
+version: 1.4.0
 base: astrowind
 demo_url: https://demo-plantilla-salud.noexpertise.com
 activa: true

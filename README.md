@@ -4,6 +4,7 @@ Web limpia para clínicas, dentistas y fisios, con cita por WhatsApp y preguntas
 
 - Sectores: clinica, dental, fisio. Estilo: limpio. Plan mínimo: presencia.
 - Secciones: hero, servicios, equipo, citas, preguntas, contacto.
+- SEO de base incluido (`src/lib/seo.ts`): canónica, og:image, JSON-LD del negocio y de las preguntas frecuentes, `robots.txt`, `sitemap.xml` y `llms.txt`; `noindex` si `seo.indexable: false`.
 - Contenido editable en `site.yaml`; metadatos en `template.yaml`; reglas para el agente en `CLAUDE.md`.
 
 ```

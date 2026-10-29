@@ -15,7 +15,7 @@ const s = seccion(Astro.props.id);
       <ul class="grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
         {s.personas.map((p) => (
           <li class="tarjeta flex items-center gap-5 p-5">
-            <Imagen src={p.foto} alt={`Foto de ${p.nombre}`} ancho={600} alto={720} class="h-20 w-20 shrink-0 rounded-full object-cover ring-4 ring-primario/10" />
+            <Imagen src={p.foto} alt={p.nombre} ancho={600} alto={720} class="h-20 w-20 shrink-0 rounded-full object-cover ring-4 ring-primario/10" />
             <div class="min-w-0">
               <p class="font-semibold">{p.nombre}</p>
               {p.cargo && <p class="text-sm text-primario">{p.cargo}</p>}

@@ -5,14 +5,15 @@ import Seccion from '../ui/Seccion.astro';
 import Titular from '../ui/Titular.astro';
 interface Props { id: string }
 const s = seccion(Astro.props.id);
+const preguntas = s ? s.preguntas.filter((p) => p && p.pregunta) : [];
 ---
 
 {
-  s && (
+  s && preguntas.length > 0 && (
     <Seccion id={Astro.props.id} contenedor="max-w-3xl">
       <Titular alinear="centro" antetitulo={s.antetitulo} titulo={s.titulo} texto={s.texto} />
       <div class="grid gap-3">
-        {s.preguntas.map((p, i) => (
+        {preguntas.map((p, i) => (
           <details class="faq tarjeta px-5 py-1" open={i === 0}>
             <summary class="flex items-center justify-between gap-4 py-4 font-semibold">
               {p.pregunta}
