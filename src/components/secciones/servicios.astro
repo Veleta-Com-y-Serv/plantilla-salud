@@ -1,9 +1,11 @@
 ---
-// Tratamientos: rejilla de tarjetas con icono en cuadrado tintado.
+// Tratamientos: rejilla de tarjetas con icono en cuadrado tintado. Los servicios con `detalle` tienen página propia
+// (/servicios/<slug>/) y la tarjeta entera enlaza a ella; los demás siguen sin enlace.
 import { seccion } from '../../data/site';
 import Seccion from '../ui/Seccion.astro';
 import Titular from '../ui/Titular.astro';
 import Icono from '../ui/Icono.astro';
+import { enlaceDe } from '../../lib/paginas';
 interface Props { id: string }
 const s = seccion(Astro.props.id);
 ---
@@ -14,15 +16,26 @@ const s = seccion(Astro.props.id);
       <Titular alinear="centro" antetitulo={s.antetitulo} titulo={s.titulo} texto={s.texto} />
       <ul class="grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
         {s.items.map((it) => (
-          <li class="tarjeta p-6">
+          <li class="tarjeta tarjeta-ficha p-6">
             <span class="grid h-12 w-12 place-items-center rounded-xl bg-primario/10 text-primario">
               <Icono nombre={it.icono} />
             </span>
-            <h3 class="mt-5 text-lg">{it.titulo}</h3>
+            <h3 class="mt-5 text-lg">{enlaceDe(it) ? <a href={enlaceDe(it)} class="tarjeta-enlace">{it.titulo}</a> : it.titulo}</h3>
             {it.texto && <p class="mt-2 text-[.95rem] opacity-70">{it.texto}</p>}
+            {enlaceDe(it) && <span class="tarjeta-ver" aria-hidden="true">Ver más <Icono nombre="flecha" tam={16} /></span>}
           </li>
         ))}
       </ul>
     </Seccion>
   )
 }
+
+<style>
+  .tarjeta-ficha { position: relative; }
+  .tarjeta-enlace { text-decoration: none; color: inherit; }
+  .tarjeta-enlace::after { content: ""; position: absolute; inset: 0; border-radius: 1.25rem; }
+  .tarjeta-enlace:focus-visible { outline: none; }
+  .tarjeta-ficha:has(.tarjeta-enlace:focus-visible) { outline: 2px solid var(--c-primario); outline-offset: 2px; }
+  .tarjeta-ficha:has(.tarjeta-enlace):hover { border-color: var(--c-primario); }
+  .tarjeta-ver { display: inline-flex; align-items: center; gap: .3rem; margin-top: 1rem; font-size: .9rem; font-weight: 600; color: var(--c-primario); }
+</style>

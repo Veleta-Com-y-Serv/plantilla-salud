@@ -53,12 +53,52 @@ secciones:
     titulo: Todo lo que tu boca necesita
     texto: "Te explicamos cada tratamiento y su precio antes de empezar."
     items:
-      - { titulo: Odontología general, texto: "Revisiones, empastes y endodoncias con anestesia sin dolor.", icono: diente }
-      - { titulo: Ortodoncia invisible, texto: "Alineadores transparentes con plan digital y seguimiento mensual.", icono: ojo }
-      - { titulo: Implantes, texto: "Implantes de titanio con garantía y cirugía guiada por ordenador.", icono: escudo }
-      - { titulo: Higiene y prevención, texto: "Limpiezas, selladores y fluoración para toda la familia.", icono: hoja }
+      - titulo: Odontología general
+        texto: "Revisiones, empastes y endodoncias con anestesia sin dolor."
+        icono: diente
+        detalle: |
+          La odontología general es la base de todo lo demás: una revisión completa de dientes, encías y mordida para saber en qué punto está tu boca y qué conviene hacer, sin alarmismos y sin prisas.
+
+          En la consulta exploramos con calma, hacemos radiografía digital cuando hace falta y te enseñamos en pantalla lo que vemos. Si hay una caries, la tratamos con empastes estéticos del color de tu diente; si el nervio está afectado, la endodoncia se hace con anestesia y en el menor número de visitas posible.
+
+          Es un servicio para toda la familia y para quien lleva tiempo sin pasar por el dentista y le da cierto reparo. Al terminar recibes un plan por escrito, con lo urgente primero y lo que puede esperar después, y una fecha orientativa para tu próxima revisión.
+      - titulo: Ortodoncia invisible
+        texto: "Alineadores transparentes con plan digital y seguimiento mensual."
+        icono: ojo
+        detalle: |
+          La ortodoncia invisible alinea los dientes con una serie de férulas transparentes y casi imperceptibles, que te quitas para comer y para cepillarte. Es una opción cómoda para adultos y adolescentes que no quieren llevar brackets metálicos.
+
+          Todo empieza con un estudio digital: escaneamos tu boca, sin pasta ni moldes, y te mostramos en pantalla cómo se irán moviendo los dientes hasta el resultado final. A partir de ahí recibes tus alineadores por tandas y los cambias en casa según el calendario que te marcamos.
+
+          El doctor Ferrer revisa tu avance cada mes, ajusta el plan si hace falta y resuelve cualquier molestia. Al acabar, te entregamos retenedores para que la sonrisa conseguida se mantenga. Si tu caso necesita otro tipo de aparato, te lo decimos con claridad desde la primera visita.
+      - titulo: Implantes
+        texto: "Implantes de titanio con garantía y cirugía guiada por ordenador."
+        icono: escudo
+        detalle: |
+          Un implante dental sustituye la raíz de un diente perdido con una pieza de titanio sobre la que se coloca una corona. Devuelve la función de masticar y el aspecto natural, y evita que los dientes vecinos se muevan hacia el hueco.
+
+          Antes de operar planificamos el caso en el ordenador con un escáner tridimensional, de modo que la cirugía es guiada, más precisa y menos invasiva. La intervención se realiza con anestesia local y la mayoría de pacientes vuelve a su rutina al día siguiente, con unas pautas sencillas de cuidado.
+
+          Cuando el hueso ha cicatrizado, colocamos la corona definitiva, a medida y del tono de tus dientes. La doctora Coso dirige el tratamiento de principio a fin y te cita para revisiones periódicas. Todo queda explicado en un presupuesto por escrito antes de empezar.
+      - titulo: Higiene y prevención
+        texto: "Limpiezas, selladores y fluoración para toda la familia."
+        icono: hoja
+        detalle: |
+          La higiene dental profesional elimina el sarro y las manchas que el cepillo no alcanza, y es la forma más sencilla de prevenir caries y problemas de encías. Es una visita corta, cómoda y adecuada para cualquier edad.
+
+          Hacemos la limpieza con ultrasonidos y pulido final, y revisamos el estado de tus encías. En los más pequeños añadimos selladores en las muelas y, cuando conviene, una aplicación de flúor para reforzar el esmalte. También te enseñamos la técnica de cepillado y el uso del hilo o de los cepillos interdentales que mejor te encajan.
+
+          Recomendamos repetirla con la frecuencia que cada boca necesita, que no es igual para todos: te lo indicamos al terminar y te avisamos cuando toque volver. Es el tratamiento que más ahorra a largo plazo, porque detecta a tiempo lo que luego sería más complicado.
       - { titulo: Estética dental, texto: "Blanqueamiento y carillas para una sonrisa natural.", icono: estrella }
-      - { titulo: Odontopediatría, texto: "Primeras visitas para niños, con calma y sin miedo.", icono: nino }
+      - titulo: Odontopediatría
+        texto: "Primeras visitas para niños, con calma y sin miedo."
+        icono: nino
+        detalle: |
+          La odontopediatría cuida la boca de los niños desde las primeras visitas y les enseña, jugando, que ir al dentista no da miedo. Cuanto antes se acostumbran, más fácil es mantener una boca sana toda la vida.
+
+          La doctora Esteban adapta cada cita a la edad del niño: primero conoce la consulta, se sienta en el sillón y toca los instrumentos, y solo después se hace la revisión. Explicamos cada paso con palabras sencillas, sin prisas y con la familia presente si el niño lo prefiere.
+
+          Revisamos la erupción de los dientes, aplicamos selladores y flúor cuando hace falta, tratamos las caries de los dientes de leche y damos pautas a los padres sobre alimentación, chupete y cepillado. Si detectamos algo que necesita ortodoncia más adelante, te lo explicamos con tiempo para que puedas decidir tranquilo.
 
   equipo:
     activa: true
