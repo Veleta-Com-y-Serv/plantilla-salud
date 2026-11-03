@@ -12,7 +12,7 @@ secciones:
   - { id: contacto, nombre: Contacto }
 estilo: limpio
 plan_minimo: presencia
-version: 1.5.0
+version: 1.6.0
 base: astrowind
 demo_url: https://demo-plantilla-salud.noexpertise.com
 activa: true
@@ -21,6 +21,13 @@ orden: 30
 # Páginas propias (docs/plantillas.md § Fichas por elemento y páginas por zona). Espejo en src/data/fichas.ts.
 fichas:
   - { lista: servicios, campo: items, ruta: servicios, nombre: Servicio, tipo: Service }
+
+# Varias páginas (docs/plantillas.md § Varias páginas): reparto recomendado al activar «Varias páginas».
+# Inicio se queda con la portada y lo que no esté en ninguna página (aquí, servicios).
+paginas:
+  - { ruta: equipo, titulo: Equipo, secciones: "equipo" }
+  - { ruta: pide-cita, titulo: Pide cita, secciones: "citas; preguntas" }
+  - { ruta: contacto, titulo: Contacto, secciones: "contacto" }
 
 # Asistente de puesta en marcha (NoExpertise): un paso por pantalla. Rutas del site sin índices;
 # tipos: texto y lista (la IA propone), datos, fotos, eleccion (colores y logo) y repaso.
